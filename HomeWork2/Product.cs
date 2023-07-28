@@ -18,7 +18,7 @@ namespace HomeWork2
         {
             Console.WriteLine($"Название товара: {_name}");
             Console.Write("Цена товара: ");
-            _price.ShowBalance();
+            _price.ShowAmount();
         }
 
         //скидка на товар(изменение суммы товара)
@@ -39,7 +39,7 @@ namespace HomeWork2
             dollars = totalCents / 100;
             cents = totalCents % 100;
 
-            _price.SetBalance(dollars, cents);
+            _price.SetAmount(dollars, cents);
             Console.WriteLine($"Цена товара со скидкой: {dollars} долларов {cents} центов");
         }
     }

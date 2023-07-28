@@ -1,6 +1,8 @@
 ﻿using HomeWork2;
 
-Money money = new Money(879, 125);
+//homework1
+Money money = new Money(725, 125);
+money.ShowAmount();
 
 Product product = new Product("Iphone14", money);
 product.ShowInfo();
