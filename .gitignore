@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/HomeWork2/Product.cs
+/HomeWork2/MusInstrument.cs
+/HomeWork2/Money.cs
