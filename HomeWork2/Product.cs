@@ -25,8 +25,8 @@ namespace HomeWork2
         public void DecreasePrice(int dollars, int cents)
         {
             //переводим доллары в центы для последующего изменения цены
-            int totalCents = _price.Dollars * 100 + _price.Cents;
-            int decreaseCents = dollars * 100 + cents;
+            int totalCents = _price.CalculateTotalCents(_price.Dollars, _price.Cents);
+            int decreaseCents = _price.CalculateCents(dollars,cents);
 
             totalCents -= decreaseCents;
 
@@ -36,8 +36,8 @@ namespace HomeWork2
                 return;
             }
 
-            dollars = totalCents / 100;
-            cents = totalCents % 100;
+            dollars = _price.TotalCentsToDollars(totalCents);
+            cents = _price.ConvertCents(totalCents);
 
             _price.SetAmount(dollars, cents);
             Console.WriteLine($"Цена товара со скидкой: {dollars} долларов {cents} центов");

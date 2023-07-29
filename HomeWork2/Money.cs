@@ -52,24 +52,20 @@ namespace HomeWork2
         public void SetAmount(int _dollars, int _cents)
         {
             // если центов больше чем 100 добавляем доллар и оставшиеся центы
-            this._dollars = ConvertToDollars(_dollars );
+            this._dollars = CentsToDollar(_dollars, _cents);
             this._cents = ConvertCents(_cents);     
         }
 
-        private static bool IsValidNumber(int number)
-        {
-            return number >= 0;
-        }
+        private static bool IsValidNumber(int number) => number >= 0;
 
-        private int ConvertToDollars(int _dollars)
-        {
-            return _dollars += _cents / 100;                      
-        }
+        private int CentsToDollar(int _dollars, int _cents) => _dollars += _cents / 100;
 
-        private int ConvertCents(int _cents)
-        {
-            return _cents % 100;
-        }
+        public int ConvertCents(int _cents) => _cents % 100;
 
+        public int CalculateTotalCents(int _dollars, int _cents) => _dollars * 100 + _cents;
+
+        public int CalculateCents(int dollars, int cents) => dollars * 100 + cents;
+        
+        public int TotalCentsToDollars(int _cents) => _cents / 100;
     }
 }
