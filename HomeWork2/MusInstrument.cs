@@ -2,7 +2,7 @@
 {
     internal class MusInstrument
     {
-        private string _name;   
+        private string _name;
         private string _description;
 
         public MusInstrument(string _name, string _description)
@@ -13,21 +13,19 @@
 
         public virtual void Sound()
         {
-            Print("Sound");          
+            Print("Sound");
         }
 
         public void Show()
         {
             Print($"Название инструмента {_name}");
-            Console.WriteLine();
         }
 
         public void Desc()
         {
             Print($"Описание муз. предмета: {_description}");
-            Console.WriteLine();
         }
-
+        //добавил виртуальный метод для практики с override
         public virtual void History()
         {
             Print("History");
@@ -35,7 +33,7 @@
 
         public void Print(string msg)
         {
-            Console.WriteLine(msg);
+            Console.WriteLine("\n" + msg + "\n");
         }
     }
 }

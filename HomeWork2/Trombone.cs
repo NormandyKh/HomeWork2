@@ -8,17 +8,12 @@
 
         public override void Sound()
         {
-            Print("Tombone звучит так : BOM BOM BOM");
-            Console.WriteLine();
+            Print("Trombone звучит так: BOM BOM");
         }
-
+        //добавил override метод для практики
         public override void History()
         {
-            Print("Тромбон - медный духовой музыкальный инструмент, созданный в XV веке в Европе. \n" +
-                "Он произошел от ранних трубных инструментов и сначала был использован в военных оркестрах. \n" +
-                "В последующие века его конструкция эволюционировала, \n" +
-                "и он стал неотъемлемой частью симфонических, джазовых и других музыкальных ансамблей.");
-            Console.WriteLine();
+            Print(InstrumentsResource.Trombone);
         }
     }
 }
